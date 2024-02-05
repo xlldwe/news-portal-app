@@ -1,0 +1,222 @@
+@import "../../variables.scss";
+
+.header {
+    margin-bottom: 40px;
+    &__wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin: 32px 125px;
+        &-logo {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            text-decoration: none;
+            gap: 10px;
+            span {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 5px;
+                &:hover {
+                    .header {
+                        &__wrapper {
+                            &-logo {
+                                &-portal {
+                                    font-family: $font1;
+                                    font-size: $font-size-4;
+                                    color: $color1;
+                                    margin: 0;
+                                }
+                                &-news {
+                                    font-family: $font1;
+                                    font-size: $font-size-4;
+                                    background-color: $color1;
+                                    color: $color2;
+                                    padding: 8px;
+                                    border-radius: 4px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &-portal {
+                font-family: $font1;
+                font-size: $font-size-4;
+                color: $color3;
+                margin: 0;
+                transition: all 0.3s ease;
+            }
+            &-news {
+                font-family: $font1;
+                font-size: $font-size-4;
+                background-color: $color3;
+                color: $color-wight;
+                padding: 8px;
+                border-radius: 4px;
+                transition: all 0.3s ease;
+            }
+        }
+    }
+}
+    
+.bm-burger-button {
+    position: relative;
+    width: 36px;
+    height: 30px;
+}
+
+
+.bm-burger-bars {
+    background: $color3;
+}
+
+
+.bm-burger-bars-hover {
+    background: $color2;
+}
+
+
+.bm-cross-button {
+    height: 24px;
+    width: 24px;
+}
+
+
+.bm-cross {
+    background: #bdc3c7;
+}
+
+.bm-menu-wrap {
+    position: fixed;
+    height: 100%;
+    top: 0;
+}
+
+
+.bm-menu {
+    width: 320px;
+    position: relative;
+    left: -20px;
+    background: $color3;
+    padding: 2.5em 1.5em 0;
+    font-size: 1.15em;
+}
+
+
+.bm-morph-shape {
+    fill: $color3
+}
+
+
+.bm-item-list {
+    text-align: center;
+    color: #b8b7ad;
+    padding: 0.8em;
+}
+
+
+.bm-item {
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    padding-bottom: 30px;
+    font-size: 22px;
+    font-family: $font1;
+    &:hover {
+        color: $color1;
+    }
+}
+.bm-overlay {
+    background: rgb(255, 255, 255);
+    display: none;
+}
+
+
+//Tablet
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .header {
+        &__wrapper {
+            margin: 32px 60px;
+            padding: 0;
+            &-logo { 
+                h1 {
+                    font-size: $font-size-4;
+                }
+                &-news {
+                    background-color: $color3;
+                    color: $color-wight;
+                    padding: 8px;
+                    border-radius: 4px;
+                }
+            }
+            &-menu {
+                &-items {
+                    font-size: $font-size-4;
+                    transition: transform 0.3s ease;
+                    a {
+                        margin: 0 5px;
+                        text-decoration: none;
+                        color: $color3;
+                        font-size: $font-size-3;
+                    }
+                }
+
+            }
+        }
+    
+    }
+}
+
+//phone
+
+@media (max-width: 767px) {
+    .header {
+        &__wrapper {
+            margin: 32px 35px;
+            &-logo {
+
+                gap: 10px;
+    
+                h1 {
+                    
+                }
+                &-news {
+                    background-color: $color3;
+                    color: $color-wight;
+                    padding: 8px;
+                    border-radius: 4px;
+                }
+            }
+            &-menu {
+
+                &-items {
+                    font-size: $font-size-4;
+                    opacity: 0;
+                    transition: .4s ease;
+                    a {
+                        margin: 0 5px;
+                        text-decoration: none;
+                        color: $color3;
+                        font-size: $font-size-3;
+                    }
+    
+                    &.active {
+                        opacity: 1;
+                        margin-right: 6px;
+                    }
+                }
+                &-image {
+                    transition: transform 0.5s ease;
+                    &.rotate {
+                        transform: rotate(-90deg);
+                    }
+                }
+            }
+        }
+    
+    }
+}

@@ -1,0 +1,28 @@
+@import "../../variables.scss";
+
+.sport-page {
+
+    h1 {
+        font-family: "Roboto", sans-serif;
+        font-size: $font-size-6;
+        margin: 24px 135px;
+    }
+}
+
+//Tablet
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .sport-page {
+        margin: 24px 60px;
+    }
+}
+
+//Phone
+
+@media (max-width: 767px) {
+    .sport-page {
+        h1 {
+            margin: 24px 35px;
+        }
+    }
+}

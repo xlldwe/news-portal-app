@@ -1,24 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Routes, Route, } from 'react-router-dom';
+import AOS from 'aos';
+
+import Politics from './components/Politics/Politics';
+import Sport from './components/Sport/Sport';
+import Media from './components/Media/Media';
+import Economy from './components/Economy/Economy';
+import MainPage from './components/MainPage/MainPage';
+import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
+
+import 'aos/dist/aos.css';
+import './index.scss';
 
 function App() {
+  AOS.init();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div className="container">
+        <Header />
+        <div className="main">
+          <Routes>
+            <Route exact path="/" element={<MainPage />} />
+            <Route path="/politics" element={<Politics />} />
+            <Route path="/sport" element={<Sport />} />
+            <Route path="/media" element={<Media />} />
+            <Route path="/economy" element={<Economy />} />
+          </Routes>
+        </div>
+        <Footer />
+      </div>
+    </BrowserRouter>
   );
 }
 

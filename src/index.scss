@@ -1,0 +1,35 @@
+@import "./variables.scss";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.main {
+    flex: 1;
+    padding: 0 10px;
+}
+
+//Tablet
+
+@media screen and (max-width: 1023px) {
+    .container {
+        max-width: 768px;
+        margin: 0 auto;
+    }
+}
+
+//Phone
+
+@media (max-width: 767px) {
+    .App {
+
+    }
+}

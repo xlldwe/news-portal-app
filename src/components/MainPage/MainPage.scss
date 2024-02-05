@@ -1,0 +1,77 @@
+@import "../../variables.scss";
+
+.main-page {
+    margin: 0 135px;
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        margin: 20px 0;
+        h1 {
+            font-family: $font2;
+            font-size: $font-size-6;
+        }
+        &-search {
+            display: flex;
+            align-items: center;
+            position: relative;
+            input {
+                outline: none;
+                background: transparent;
+                cursor: pointer;
+                border: 3px solid $color2;
+                transition: border-color 0.3s;
+                &:focus {
+                    border-color: $color1;
+                }
+            }
+            button {
+                outline: none;
+                background: transparent;
+                border: none;
+                position: absolute;
+                cursor: pointer;
+                margin-left: 153px;
+                margin-top: 3px;
+                transition: color 0.3s;
+                    img {
+                        width: 14px;
+                        height: 14px;
+                        transition: filter 0.5s;
+                    }
+                    
+                    img:hover {
+                        filter: invert(50%);
+                    }
+            }
+        }
+    }
+}
+
+//Tablet
+
+@media screen and (max-width: 1023px) {
+    .main-page {
+        margin: 0 60px;
+    }
+}
+
+//Phone
+
+@media (max-width: 767px) {
+    .main-page {
+        margin: 0 35px;
+        &__wrapper {
+            h1 {
+                font-size: $font-size-4;
+            }
+            &-search {
+                button {
+                    margin-left: 53px;
+                }
+                input {
+                    width: 70px;
+                }
+            }
+        }
+    }
+}

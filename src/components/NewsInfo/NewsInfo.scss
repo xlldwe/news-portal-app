@@ -1,0 +1,76 @@
+@import "../../variables.scss";
+
+.news-info {
+    display: flex;
+    &-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        &-date {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            font-family: $font1;
+            font-size: $font-size-1;
+            color: $color1;
+            margin: 0;
+            div {
+                margin-top: 24px;
+            }
+            img {
+                padding-right: 5px;
+                width: 15px;
+                height: auto;
+            }
+        }
+    }
+    &__wrapper {
+        
+        &-image {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 16px;
+        }
+        a {
+            font-family: $font1;
+            font-size: $font-size-4;
+            font-weight: 700;
+            text-decoration: none;
+            color: $color3;
+            transition: .2s ease-in-out;
+            &:hover {
+                color: $color1;
+            }
+        }
+    }
+}
+
+//Tablet
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .news-info {
+        &__wrapper {
+            a {
+                font-family: $font1;
+                font-size: $font-size-3;
+            }
+        }
+    }
+}
+
+//Phone
+
+@media (max-width: 767px) {
+    .news-info {
+        &__wrapper {
+            a {
+                font-family: $font1;
+                font-size: $font-size-1;
+            }
+        }
+    }
+    .m-hide {
+        display: none;
+    }
+}

@@ -1,0 +1,19 @@
+@import "../../variables.scss";
+
+.footer{
+    background-color: $color-wight;
+    position: relative;
+    margin-top: auto;
+    width: 100%;
+    margin-top: 30px;
+    &__wrapper {
+        text-align: center;
+        h1 {
+            padding: 31px 0;
+            margin: 0;
+            font-family: $font1;
+            font-size: $font-size-2;
+            color: $color1;
+        }
+    }
+}
