@@ -1,6 +1,7 @@
 {
-  "name": "news-app",
+  "name": "news-portal-app",
   "version": "0.1.0",
+  "homepage": "https://xlldwe.github.io/news-portal-app",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
