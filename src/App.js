@@ -15,7 +15,7 @@ import './index.scss';
 function App() {
   AOS.init();
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/news-portal-app">
       <div className="container">
         <Header />
         <div className="main">
