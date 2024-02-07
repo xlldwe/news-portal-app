@@ -27,8 +27,8 @@ function App() {
             <Route path="/economy" element={<Economy />} />
           </Routes>
         </div>
-        <Footer />
       </div>
+      <Footer />
     </BrowserRouter>
   );
 }

@@ -5,7 +5,7 @@ import './Header.scss'
 
 function Header () {
     return (
-        <div data-aos="fade-down" className="header">
+        <div className="header">
             <div className="header__wrapper">
                 <div className="header__wrapper-logo">
                     <NavLink exact to="/" className="header__wrapper-logo">
